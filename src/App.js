@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import NavBar from './components/navbar/Nav'
+import CounterView from "./views/counter-view";
+import VersionContext from "./views/VersionContext";
+import HomeComponent from './views/HomeComponent'
+import ExpenseTracker from './views/expense-tracker/ExpenseTracker'
+import NetlifyForm from './views/form/NetlifyForm'
+import Layout from "./components/layout/Layout"
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <NavBar />
+        <Layout>
+          <Switch>
+            <Route path="/" exact component={HomeComponent} />
+
+            <Route path="/counter-view" component={CounterView} />
+            <Route path="/version-context" component={VersionContext} />
+            <Route path="/expense-tracker" component={ExpenseTracker} />
+            <Route path="/netlify-form" component={NetlifyForm} />
+          </Switch>
+        </Layout>
+      </Router>
+    </>
   );
 }
-
-export default App;
