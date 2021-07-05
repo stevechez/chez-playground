@@ -4,12 +4,13 @@ import { Balance } from './Balance'
 import './expense-tracker.module.css'
 import { IncomeExpenses } from './IncomeExpenses'
 import { TransactionList } from './TransactionList'
+import styles from './expense-tracker.module.css'
 
 export default function ExpenseTracker() {
   return (
     <div>
       <h1>Expense Tracker</h1>
-      <div className="container-inner">
+      <div className={styles.containerInner}>
         <Balance />
         <IncomeExpenses />
         <TransactionList />

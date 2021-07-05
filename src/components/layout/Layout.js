@@ -4,7 +4,7 @@ import { Container } from 'semantic-ui-react'
 const Layout = ({ children }) => {
   return (
     <>
-      <Container className="mt-80">
+      <Container className="mt-20">
         <main>{children}</main>
       </Container>
     </>

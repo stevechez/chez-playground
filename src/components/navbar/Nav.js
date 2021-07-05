@@ -26,16 +26,26 @@ const NavBar = () => (
             <Dropdown.Item>
               <Link to="/counter-view">Counter View</Link>
             </Dropdown.Item>
-            <Dropdown.Item>
+            {/* <Dropdown.Item>
               <Link to="/expense-tracker">Expense</Link>
-            </Dropdown.Item>
+            </Dropdown.Item> */}
             <Dropdown.Item>
               <Link to="/netlify-form">Netlify Form</Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <Link to="/react-query">React Query</Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <Link to="/usestate">useSate </Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <Link to="/modal">Modal </Link>
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </Container>
     </Menu>
+
   </div>
 )
 

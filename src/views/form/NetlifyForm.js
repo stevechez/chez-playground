@@ -4,7 +4,7 @@ import { Button, Form } from 'semantic-ui-react'
 const NetlifyForm = () => (
   <div className="container-inner">
     <h1>Netlify Form</h1>
-    <Form name="contact" method="POST" data-netlify="true">
+    <form name="contact" method="POST" data-netlify="true">
       <Form.Field>
         <label>Your Name:
         <input type="text" name="name" /></label>
@@ -16,7 +16,7 @@ const NetlifyForm = () => (
 
       </Form.Field>
       <Button type='submit'>Submit</Button>
-    </Form>
+    </form>
 
   </div>
 )
